@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 
 
 public class GameObject implements MovingObject {
@@ -9,7 +10,7 @@ public class GameObject implements MovingObject {
 	
 	private double direction;
 	private Color color;
-	private Image img;
+	private BufferedImage img;
 	
 	public GameObject(double x, double y, double wid, double ht) {
 		speed = 0; 
@@ -19,16 +20,13 @@ public class GameObject implements MovingObject {
 	@Override
 	public void move() {
 		x+=speed*Math.cos(direction);
-		
-		
-		// there should be some checking that takes place
-		
 	}
-
+	
 	@Override
 	public Rectangle getBoundingRect() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 }

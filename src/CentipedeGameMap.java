@@ -9,7 +9,7 @@ public class CentipedeGameMap extends GameMap {
 	
 	@Override
 	public void openBackgroundImage() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

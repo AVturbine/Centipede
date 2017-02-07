@@ -15,7 +15,7 @@ public abstract class GameMap {
 
 	
 	public abstract void openBackgroundImage();
-
+		
 
 	public void add(GameObject go) {
 		movers.add(go);
