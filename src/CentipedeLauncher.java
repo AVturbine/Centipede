@@ -5,14 +5,14 @@ import java.util.Map;
 import javax.swing.JFrame;
 
 
-public class MovingObjectsGameLauncher extends JFrame{
+public class CentipedeLauncher extends JFrame{
 	
-	public MovingObjectsGameLauncher() {
+	public CentipedeLauncher() {
 		Map<String,String> environMap= System.getenv();
 		System.out.println(environMap.keySet());
 		
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-		MovingObjectsPanel mop = new MovingObjectsPanel(d);
+		CentipedePanel mop = new CentipedePanel(d);
 		this.add(mop);
 		this.pack();
 		this.setVisible(true);
@@ -20,7 +20,7 @@ public class MovingObjectsGameLauncher extends JFrame{
 	}
 
 	public static void main(String[] args) {
-		new MovingObjectsGameLauncher();
+		new CentipedeLauncher();
 	}
 
 }

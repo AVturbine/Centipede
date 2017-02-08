@@ -6,7 +6,7 @@ import javax.swing.Timer;
 import javax.swing.JPanel;
 
 
-public class MovingObjectsPanel extends JPanel {
+public class CentipedePanel extends JPanel {
 	
 	final Dimension defaultDim;
 	static final int TICK_SPEED = 25;
@@ -14,11 +14,11 @@ public class MovingObjectsPanel extends JPanel {
 	
 	private Timer timer;
 	
-	public MovingObjectsPanel() {
+	public CentipedePanel() {
 		this(new Dimension(800,600));
 	}
 	
-	public MovingObjectsPanel(Dimension dim) {
+	public CentipedePanel(Dimension dim) {
 		defaultDim = dim;
 		this.setPreferredSize(defaultDim);
 		setUpTimer(TICK_SPEED);

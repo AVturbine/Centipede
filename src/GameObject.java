@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
@@ -9,12 +10,11 @@ import javax.imageio.ImageIO;
 
 
 public abstract class GameObject {
-	private double speed, x,y,width, height, health, damage;
+	protected double speed, x,y,width, height, health, damage;
 	//public static final int NORTH = 1, SOUTH = 3, EAST = 2,WEST = 4;
-	
-	private double direction; // direction from 0 to 360
-	private Color color;
-	private BufferedImage img;
+	protected double direction; // direction from 0 to 360
+	protected Color color;
+	protected BufferedImage img;
 	public Rectangle boundingRect;
 	
 	public void move() {
@@ -26,7 +26,11 @@ public abstract class GameObject {
 		return boundingRect;
 	}
 	
-	public void loadImage(String imageName) {
+	public void draw(Graphics g) {
+		g.drawImage(img, (int)(x), (int)(y), null);
+	}
+	
+	protected void loadImage(String imageName) {
 		try {
 			URL url = getClass().getResource("res/" + imageName + ".png");
 			img = ImageIO.read(url);
@@ -35,6 +39,10 @@ public abstract class GameObject {
 			Log.log("Problem opening the front resource: filename is " + imageName, Log.VERBOSE);
 			e.printStackTrace();
 		}
+	}
+	
+	public boolean isColliding (Rectangle otherRect) {
+		
 	}
 
 }
