@@ -3,21 +3,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public abstract class GameMap {
+public class GameMap {
 
-	private List<MovingObject> movers;
+	private List<GameObject> objects;
 	Image backgroundImage;
 	
 	public GameMap() {
-		movers = new ArrayList();
+		objects = new ArrayList();
 		openBackgroundImage();
 	}
 
 	
-	public abstract void openBackgroundImage();
+	public void openBackgroundImage() {
+		
+	}
 		
 
 	public void add(GameObject go) {
-		movers.add(go);
+		objects.add(go);
 	} 	
 }

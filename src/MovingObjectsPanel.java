@@ -11,6 +11,7 @@ public class MovingObjectsPanel extends JPanel {
 	final Dimension defaultDim;
 	static final int TICK_SPEED = 25;
 	GameMap gm;
+	
 	private Timer timer;
 	
 	public MovingObjectsPanel() {
@@ -21,12 +22,8 @@ public class MovingObjectsPanel extends JPanel {
 		defaultDim = dim;
 		this.setPreferredSize(defaultDim);
 		setUpTimer(TICK_SPEED);
-		makeGameMap();
 	}
-	private void makeGameMap() {
-		gm = new CentipedeGameMap();
-		
-	}
+	
 	
 	
 	
