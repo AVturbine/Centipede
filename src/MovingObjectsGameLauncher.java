@@ -5,19 +5,22 @@ import java.util.Map;
 import javax.swing.JFrame;
 
 
-public class MovingObjectsGameLauncher {
-
-	public static void main(String[] args) {
-		JFrame gameFrame = new JFrame();
+public class MovingObjectsGameLauncher extends JFrame{
+	
+	public MovingObjectsGameLauncher() {
 		Map<String,String> environMap= System.getenv();
 		System.out.println(environMap.keySet());
 		
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		MovingObjectsPanel mop = new MovingObjectsPanel(d);
-		gameFrame.add(mop);
-		gameFrame.pack();
-		gameFrame.setVisible(true);
-		gameFrame.setDefaultCloseOperation(gameFrame.EXIT_ON_CLOSE);
+		this.add(mop);
+		this.pack();
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new MovingObjectsGameLauncher();
 	}
 
 }
